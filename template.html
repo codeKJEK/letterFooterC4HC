@@ -1,0 +1,102 @@
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    @page {
+        margin: .75in .25in .25in .25in;
+    }
+
+    .content-container {
+        margin: 0 .5in;
+    }
+
+    .width-100pct {
+        width: 100%;
+    }
+
+    .width-50pct {
+        width: 50%;
+    }
+
+    .align-right {
+        text-align: right;
+    }
+
+    .align-center {
+        text-align: center;
+    }
+
+    .footer-space {
+        height: .65in;
+    }
+
+    .letter-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 12px;
+        z-index: -1;
+    }
+
+    .page1-cover,
+    .page2-cover {
+        position: absolute;
+        width: 100%;
+        height: .65in;
+        background-color: #fff;
+        left: 0;
+    }
+
+    .page1-cover {
+        top: 9.34in;
+    }
+
+    .page2-cover {
+        top: 19.34in;
+    }
+
+    .lap-container {
+        height: 10in;
+        page-break-before: always;
+        background-color: #fff;
+        padding: 0 .5in;
+    }
+</style>
+
+<div class="page1-cover"></div>
+<div class="page2-cover"></div>
+<div class="content-container">
+    <table class="letter-container">
+        <tbody>
+            <tr>
+                <td>
+                    <!-- LETTER HTML GOES HERE -->
+                </td>
+            </tr>
+        </tbody>
+        <tfoot class="footer-space">
+            <tr>
+                <td><!-- LEAVE THIS BLANK --></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="lap-container"></div>
+<div class="lap-container"></div>
+<div class="lap-container"></div>
+<table class="letter-footer">
+    <tbody>
+        <tr>
+            <td>Row 1 Col 1</td>
+            <td class="align-right">Row 1 Col 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Col 1</td>
+            <td class="align-right">Row 2 Col 2</td>
+        </tr>
+    </tbody>
+</table>

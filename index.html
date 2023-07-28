@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @page {
+            margin: .75in .25in .25in .25in;
+        }
+
+        .content-container {
+            margin: 0 .5in;
+        }
+
+        .width-100pct {
+            width: 100%;
+        }
+
+        .width-50pct {
+            width: 50%;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .footer-space {
+            height: .65in;
+        }
+
+        .letter-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 12px;
+            z-index: -1;
+        }
+
+        .page1-cover,
+        .page2-cover {
+            position: absolute;
+            width: 100%;
+            height: .65in;
+            background-color: #fff;
+            left: 0;
+        }
+
+        .page1-cover {
+            top: 9.34in;
+        }
+
+        .page2-cover {
+            top: 19.34in;
+        }
+
+        .lap-container {
+            height: 10in;
+            page-break-before: always;
+            background-color: #fff;
+            padding: 0 .5in;
+        }
+
+        .example {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .example-page {
+            height: 9.5in;
+            display: flex;
+            font-size: 40px;
+            align-items: center;
+            justify-content: center;
+            page-break-after: always;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page1-cover"></div>
+    <div class="page2-cover"></div>
+    <!-- CODE LETTER BELOW -->
+    <div class="content-container">
+        <div class="example-page">
+            MAILER PAGE
+        </div>
+        <div class="example-page">
+            COVER PAGE
+        </div>
+        <table class="letter-container">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit odit cum, officiis minima id
+                            non
+                            ipsum harum quasi tempore, laborum natus fuga quam vel nesciunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque magnam voluptatem sint
+                            nesciunt quae aspernatur ab eligendi, voluptatibus laboriosam ex eum ipsa sit eius iure
+                            commodi
+                            nobis recusandae beatae vel minus ratione? Quasi, necessitatibus obcaecati tempore commodi
+                            recusandae illum porro facere itaque quam omnis, dicta accusamus doloremque atque iusto!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima explicabo enim? Rem
+                            exercitationem vitae ipsa, ullam laudantium dolore totam veniam ratione tempora aperiam
+                            nulla,
+                            impedit doloremque odio temporibus repudiandae ab! Ad quas perferendis obcaecati enim ab.
+                            Aut
+                            consectetur dignissimos exercitationem sequi assumenda quos cumque nisi laudantium alias
+                            reprehenderit, ullam eaque doloribus dicta veniam, non delectus magni? Quaerat deleniti vel,
+                            quia adipisci nemo iure rem ipsa eaque molestiae illum ratione earum tenetur, voluptatem
+                            mollitia beatae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa accusantium, harum
+                            corporis voluptatum quis quisquam nostrum labore consequatur delectus sunt distinctio ab
+                            illum
+                            vitae rerum iure. Corporis minima, eveniet eligendi molestias ut voluptates accusamus aut
+                            odio
+                            iure expedita voluptatem inventore soluta natus ducimus, aliquam eos rem numquam deleniti ex
+                            et
+                            qui dolore! Impedit perferendis perspiciatis rerum, numquam, odio quasi asperiores veniam
+                            fuga
+                            similique doloremque, cupiditate delectus harum consectetur pariatur. Mollitia, suscipit
+                            fugit,
+                            officiis omnis consequuntur voluptatem amet excepturi, incidunt magni quis itaque
+                            accusantium
+                            dolores molestiae et ducimus id quae possimus officia inventore nostrum alias! Rerum eos
+                            unde
+                            odit ipsa.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                        </ul>
+                        <table class="width-100pct">
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                        </table>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit odit cum, officiis minima id
+                            non
+                            ipsum harum quasi tempore, laborum natus fuga quam vel nesciunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque magnam voluptatem sint
+                            nesciunt quae aspernatur ab eligendi, voluptatibus laboriosam ex eum ipsa sit eius iure
+                            commodi
+                            nobis recusandae beatae vel minus ratione? Quasi, necessitatibus obcaecati tempore commodi
+                            recusandae illum porro facere itaque quam omnis, dicta accusamus doloremque atque iusto!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima explicabo enim? Rem
+                            exercitationem vitae ipsa, ullam laudantium dolore totam veniam ratione tempora aperiam
+                            nulla,
+                            impedit doloremque odio temporibus repudiandae ab! Ad quas perferendis obcaecati enim ab.
+                            Aut
+                            consectetur dignissimos exercitationem sequi assumenda quos cumque nisi laudantium alias
+                            reprehenderit, ullam eaque doloribus dicta veniam, non delectus magni? Quaerat deleniti vel,
+                            quia adipisci nemo iure rem ipsa eaque molestiae illum ratione earum tenetur, voluptatem
+                            mollitia beatae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa accusantium, harum
+                            corporis voluptatum quis quisquam nostrum labore consequatur delectus sunt distinctio ab
+                            illum
+                            vitae rerum iure. Corporis minima, eveniet eligendi molestias ut voluptates accusamus aut
+                            odio
+                            iure expedita voluptatem inventore soluta natus ducimus, aliquam eos rem numquam deleniti ex
+                            et
+                            qui dolore! Impedit perferendis perspiciatis rerum, numquam, odio quasi asperiores veniam
+                            fuga
+                            similique doloremque, cupiditate delectus harum consectetur pariatur. Mollitia, suscipit
+                            fugit,
+                            officiis omnis consequuntur voluptatem amet excepturi, incidunt magni quis itaque
+                            accusantium
+                            dolores molestiae et ducimus id quae possimus officia inventore nostrum alias! Rerum eos
+                            unde
+                            odit ipsa.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                        </ul>
+                        <table class="width-100pct">
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                        </table>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit odit cum, officiis minima id
+                            non
+                            ipsum harum quasi tempore, laborum natus fuga quam vel nesciunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque magnam voluptatem sint
+                            nesciunt quae aspernatur ab eligendi, voluptatibus laboriosam ex eum ipsa sit eius iure
+                            commodi
+                            nobis recusandae beatae vel minus ratione? Quasi, necessitatibus obcaecati tempore commodi
+                            recusandae illum porro facere itaque quam omnis, dicta accusamus doloremque atque iusto!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minima explicabo enim? Rem
+                            exercitationem vitae ipsa, ullam laudantium dolore totam veniam ratione tempora aperiam
+                            nulla,
+                            impedit doloremque odio temporibus repudiandae ab! Ad quas perferendis obcaecati enim ab.
+                            Aut
+                            consectetur dignissimos exercitationem sequi assumenda quos cumque nisi laudantium alias
+                            reprehenderit, ullam eaque doloribus dicta veniam, non delectus magni? Quaerat deleniti vel,
+                            quia adipisci nemo iure rem ipsa eaque molestiae illum ratione earum tenetur, voluptatem
+                            mollitia beatae.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa accusantium, harum
+                            corporis voluptatum quis quisquam nostrum labore consequatur delectus sunt distinctio ab
+                            illum
+                            vitae rerum iure. Corporis minima, eveniet eligendi molestias ut voluptates accusamus aut
+                            odio
+                            iure expedita voluptatem inventore soluta natus ducimus, aliquam eos rem numquam deleniti ex
+                            et
+                            qui dolore! Impedit perferendis perspiciatis rerum, numquam, odio quasi asperiores veniam
+                            fuga
+                            similique doloremque, cupiditate delectus harum consectetur pariatur. Mollitia, suscipit
+                            fugit,
+                            officiis omnis consequuntur voluptatem amet excepturi, incidunt magni quis itaque
+                            accusantium
+                            dolores molestiae et ducimus id quae possimus officia inventore nostrum alias! Rerum eos
+                            unde
+                            odit ipsa.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam libero nam quod
+                                inventore
+                                vitae, ipsa voluptatem culpa temporibus obcaecati minima?</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum in facilis iste officiis
+                                rem
+                                delectus consequuntur magnam repudiandae accusamus porro, omnis maxime ipsa odit nemo!
+                            </li>
+                        </ul>
+                        <table class="width-100pct">
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                            <tr>
+                                <td class="width-50pct">Lorem, ipsum dolor.</td>
+                                <td class="width-50pct">Lorem ipsum dolor sit amet.</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot class="footer-space">
+                <tr>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="lap-container example">
+        LAP EXAMPLE
+    </div>
+    <div class="lap-container example">
+        LAP EXAMPLE
+    </div>
+    <div class="lap-container example">
+        LAP EXAMPLE
+    </div>
+    <table class="letter-footer">
+        <tbody>
+            <tr>
+                <td>Row 1 Col 1</td>
+                <td class="align-right">Row 1 Col 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Col 1</td>
+                <td class="align-right">Row 2 Col 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+
+</html>
