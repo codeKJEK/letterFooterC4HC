@@ -1,0 +1,74 @@
+<style>
+    :root {
+        --cover-page-number: 0;
+        --page-margin: .4in;
+
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    @page {
+        size: 8.5in 11in;
+        margin: var(--page-margin) var(--page-margin) 0 var(--page-margin);
+    }
+
+    .p1-footer,
+    .p2-footer {
+        position: absolute;
+        width: 100%;
+        height: var(--page-margin);
+    }
+
+    .p1-footer *,
+    .p2-footer * {
+        margin: 0;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<div class="p1-footer">
+    <div class="footer-row">
+        <p>Row One Col One</p>
+        <p>Row One Col Two</p>
+    </div>
+    <div class="footer-row">
+        <p>Row Two Col One</p>
+        <p>Row Two Col Two</p>
+    </div>
+    <div class="p2-footer">
+        <div class="footer-row">
+            <p>Row One Col One</p>
+            <p>Row One Col Two</p>
+        </div>
+        <div class="footer-row">
+            <p>Row Two Col One</p>
+            <p>Row Two Col Two</p>
+        </div>
+    </div>
+
+    <script>
+        let rootStyles = getComputedStyle(document.documentElement);
+        let pageMarginSting = rootStyles.getPropertyValue('--page-margin');
+        let coverPageNumber = parseFloat(rootStyles.getPropertyValue('--cover-page-number')) + 1;
+        let pageMargin = parseFloat(pageMarginSting.slice(0, -2));
+        let pageMinusMargin = 11 - pageMargin;
+        let pageLength = coverPageNumber * pageMinusMargin;
+        let footerPosition = pageLength - pageMargin;
+        let secondFooterPosition = pageMinusMargin;
+        let footerCSS = `top: ${footerPosition}in;`;
+        let secondFooterCSS = `top: ${secondFooterPosition}in;`;
+        let footer = document.querySelector('.p1-footer');
+        let secondFooter = document.querySelector('.p2-footer');
+        footer.style.cssText = footerCSS;
+        secondFooter.style.cssText = secondFooterCSS;
+    </script>

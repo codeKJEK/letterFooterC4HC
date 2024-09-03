@@ -1,0 +1,12 @@
+<script>
+    let rootStyles = getComputedStyle(document.documentElement);
+    let pageMarginSting = rootStyles.getPropertyValue('--page-margin');
+    let coverPageNumber = parseFloat(rootStyles.getPropertyValue('--cover-page-number')) + 1;
+    let pageMargin = parseFloat(pageMarginSting.slice(0, -2));
+    let pageMinusMargin = 11 - (pageMargin + .02);
+    let pageLength = coverPageNumber * pageMinusMargin;
+    let footerPosition = pageLength - pageMargin;
+    let footerCSS = `top: ${footerPosition}in;`;
+    let footer = document.querySelector('.p1-footer');
+    footer.style.cssText = footerCSS;
+</script>

@@ -1,0 +1,169 @@
+:root {
+    --footer-row-number: 2;
+    --footer-bottom-space: .1in;
+    --footer-row-height: .calc((var(--page-margin) - var(--footer-bottom-space)) / var(--footer-row-number));
+    --pages-before-footer: calc(var(--cover-page-number) + 1);
+    --page-height: calc(11in - var(--page-margin));
+    --footer-placement: calc((var(--page-height) * var(--pages-before-footer)) - (var(--page-margin) + .05in));
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@page {
+    size: 8.5in 11in;
+    margin: var(--page-margin) var(--page-margin) 0 var(--page-margin);
+}
+
+.container {
+    height: calc(11in - var(--page-margin));
+    width: calc(8.5in - (var(--page-margin) + var(--page-left-margin)));
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.container-table {
+    break-after: page;
+}
+
+.p1-footer {
+    position: absolute;
+    top: var(--footer-placement);
+    left: 0;
+    width: 100%;
+
+}
+
+.footer {
+    position: fixed;
+    bottom: var(--footer-bottom-space);
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    z-index: -1;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    height: var(--footer-row-height);
+}
+
+.footer-row * {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-space {
+    height: var(--page-margin);
+}
+
+body {
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    margin: 16pt 0;
+    line-height: 16pt;
+}
+
+li {
+    margin-bottom: 1pt;
+}
+
+.h_16pt,
+.h_14pt,
+.h_12pt {
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+}
+
+.h_16pt {
+    font-size: 16pt;
+}
+
+.h_14pt {
+    font-size: 14pt;
+}
+
+.h_12pt {
+    font-size: 12pt;
+}
+
+.ta_c {
+    text-align: center;
+}
+
+.ta_r {
+    text-align: center;
+}
+
+.w_1-6in {
+    width: 1.6in;
+}
+
+.w_2-4in {
+    width: 2.4in;
+}
+
+.w_4in {
+    width: 4in;
+}
+
+.mb_16pt {
+    margin-bottom: 16pt;
+}
+
+.mtb_18pt {
+    margin-top: 16pt;
+    margin-bottom: 16pt;
+}
+
+.mtb_24pt {
+    margin-top: 24pt;
+    margin-bottom: 24pt;
+}
+
+.mb_0 {
+    margin-bottom: 0;
+}
+
+.mt_0 {
+    margin-top: 0;
+}
+
+.mr_13pt {
+    margin-right: 13pt;
+}
+
+.line {
+    border-top: 1px solid black;
+}
+
+.p_lr-24pt {
+    padding-left: 24pt;
+    padding-right: 24pt;
+}
+
+.pl_37pt {
+    padding-left: 37pt;
+}
+
+.b_lr {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.fs_10pt {
+    font-size: 10pt;
+}
+
+.pb_before {
+    break-before: page;
+}

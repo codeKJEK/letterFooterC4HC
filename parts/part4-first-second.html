@@ -1,0 +1,17 @@
+<script>
+    let rootStyles = getComputedStyle(document.documentElement);
+    let pageMarginSting = rootStyles.getPropertyValue('--page-margin');
+    let coverPageNumber = parseFloat(rootStyles.getPropertyValue('--cover-page-number')) + 1;
+    let pageMargin = parseFloat(pageMarginSting.slice(0, -2));
+    let pageMinusMargin = 11 - (pageMargin + .02);
+    let pageLength = coverPageNumber * pageMinusMargin;
+    let secondPageLength = (coverPageNumber + 1) * pageMinusMargin;
+    let footerPosition = pageLength - pageMargin;
+    let secondFooterPosition = secondPageLength - pageMargin;
+    let footerCSS = `top: ${footerPosition}in;`;
+    let secondFooterCSS = `top: ${secondFooterPosition}in;`;
+    let footer = document.querySelector('.p1-footer');
+    let secondFooter = document.querySelector('.p2-footer');
+    footer.style.cssText = footerCSS;
+    secondFooter.style.cssText = secondFooterCSS;
+</script>
