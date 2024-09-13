@@ -1,0 +1,35 @@
+.TabSelected,
+.TabNotSelected {
+    width: min-content;
+    background-color: var(--secondary-color);
+    height: 44px;
+    padding: 8px;
+    border-radius: 16px 16px 0 0;
+    border: 1px solid #000;
+}
+
+.TabSelected {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.trTabRow {
+    border-bottom: 1px solid #000;
+}
+
+.OutlinedBody {
+    border-collapse: collapse;
+}
+
+.OutlinedBody thead {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.OutlinedBody thead td {
+    padding: 8px;
+}
+
+.OutlinedBody tbody tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
